@@ -1,0 +1,1168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>宿舍分配系统</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QStackedWidget" name="stackedWidget">
+      <!-- 登录页面 -->
+      <widget class="QWidget" name="loginPage">
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QLabel" name="loginTitle">
+          <property name="text">
+           <string>宿舍分配系统</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="studentIdInput">
+          <property name="placeholderText">
+           <string>请输入学号</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="passwordInput">
+          <property name="echoMode">
+           <enum>QLineEdit::Password</enum>
+          </property>
+          <property name="placeholderText">
+           <string>请输入密码</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="loginButton">
+          <property name="text">
+           <string>登录</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="registerButton">
+          <property name="text">
+           <string>注册新用户</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+
+      <!-- 注册页面 -->
+      <widget class="QWidget" name="registerPage">
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <item>
+         <widget class="QLabel" name="registerTitle">
+          <property name="text">
+           <string>新用户注册</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="regIdCardLabel">
+          <property name="text">
+           <string>身份证号：</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="regIdCardInput">
+          <property name="placeholderText">
+           <string>请输入18位身份证号</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="regNameLabel">
+          <property name="text">
+           <string>姓名：</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="regNameInput">
+          <property name="placeholderText">
+           <string>请输入姓名</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="regGenderLabel">
+          <property name="text">
+           <string>性别：</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="regGenderInput">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>40</height>
+           </size>
+          </property>
+          <item>
+           <property name="text">
+            <string>男</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>女</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="regMajorLabel">
+          <property name="text">
+           <string>专业：</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="regMajorInput">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>40</height>
+           </size>
+          </property>
+          <item>
+           <property name="text">
+            <string>计算机科学与技术</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>软件工程</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>人工智能</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>数据科学</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>电子信息工程</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>通信工程</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>自动化</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>机械工程</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>电气工程</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>土木工程</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>化学工程</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>生物工程</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>环境工程</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>材料科学与工程</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>工业工程</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>经济学</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>金融学</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>工商管理</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>市场营销</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>会计学</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>法学</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>新闻传播学</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>心理学</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>教育学</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>医学</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>药学</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>护理学</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>艺术设计</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>音乐学</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>体育学</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>其他</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="regPasswordLabel">
+          <property name="text">
+           <string>密码：</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="regPasswordInput">
+          <property name="echoMode">
+           <enum>QLineEdit::Password</enum>
+          </property>
+          <property name="placeholderText">
+           <string>请输入密码</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="submitRegisterButton">
+          <property name="text">
+           <string>提交注册</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="backToLoginButton">
+          <property name="text">
+           <string>返回登录</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+
+      <!-- 个人主页 -->
+      <widget class="QWidget" name="homePage">
+       <layout class="QVBoxLayout" name="verticalLayout_home">
+        <item>
+         <widget class="QLabel" name="welcomeLabel"/>
+        </item>
+        <item>
+         <widget class="QPushButton" name="studentMessageCenterButton">
+          <property name="text">
+           <string>消息中心</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="assignDormitoryButton">
+          <property name="text">
+           <string>分配宿舍</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="userInfoGroup"/>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="dormitoryAssignmentGroup">
+          <property name="title">
+           <string>宿舍分配信息</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_assignment">
+           <item>
+            <widget class="QLabel" name="assignmentInfoLabel">
+             <property name="text">
+              <string>暂未分配宿舍</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="studentLogoutButton">
+          <property name="text">
+           <string>退出登录</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+
+      <!-- 偏好设置页面 -->
+      <widget class="QWidget" name="preferencesPage">
+       <layout class="QVBoxLayout" name="verticalLayout_7">
+        <item>
+         <widget class="QLabel" name="preferencesTitle">
+          <property name="text">
+           <string>设置宿舍偏好</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="bedPreferenceGroup">
+          <property name="title">
+           <string>床位偏好</string>
+          </property>
+          <layout class="QFormLayout" name="formLayout_3">
+           <item row="0" column="0">
+            <widget class="QLabel" name="preferUpperLabel">
+             <property name="text">
+              <string>床位位置：</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QComboBox" name="preferUpperInput">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>40</height>
+              </size>
+             </property>
+             <item>
+              <property name="text">
+               <string>上铺</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>下铺</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="preferCapacityLabel">
+             <property name="text">
+              <string>宿舍容量：</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QComboBox" name="preferCapacityInput">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>40</height>
+              </size>
+             </property>
+             <item>
+              <property name="text">
+               <string>4人</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>6人</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>8人</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="scheduleGroup">
+          <property name="title">
+           <string>作息时间</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_8">
+           <item>
+            <widget class="QRadioButton" name="earlyBirdRadio">
+             <property name="text">
+              <string>早睡早起型（22:00前睡觉）</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QRadioButton" name="normalRadio">
+             <property name="checked">
+              <bool>true</bool>
+             </property>
+             <property name="text">
+              <string>正常作息型（23:00前睡觉）</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QRadioButton" name="nightOwlRadio">
+             <property name="text">
+              <string>夜猫子型（23:00后睡觉）</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="hobbiesGroup">
+          <property name="title">
+           <string>兴趣爱好</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout">
+           <item row="0" column="0">
+            <widget class="QCheckBox" name="readingCheck">
+             <property name="text">
+              <string>阅读</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QCheckBox" name="gamingCheck">
+             <property name="text">
+              <string>游戏</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="2">
+            <widget class="QCheckBox" name="sportsCheck">
+             <property name="text">
+              <string>运动</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QCheckBox" name="musicCheck">
+             <property name="text">
+              <string>音乐</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QCheckBox" name="artCheck">
+             <property name="text">
+              <string>艺术</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="2">
+            <widget class="QCheckBox" name="programmingCheck">
+             <property name="text">
+              <string>编程</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QCheckBox" name="photographyCheck">
+             <property name="text">
+              <string>摄影</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QCheckBox" name="cookingCheck">
+             <property name="text">
+              <string>烹饪</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="2">
+            <widget class="QCheckBox" name="travelCheck">
+             <property name="text">
+              <string>旅行</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QCheckBox" name="otherCheck">
+             <property name="text">
+              <string>其他</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="acceptDifferentMajorInput">
+          <property name="text">
+           <string>接受与不同专业的学生同住</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <item>
+           <widget class="QPushButton" name="submitPreferencesButton">
+            <property name="text">
+             <string>保存偏好</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="startAssignmentButton">
+            <property name="text">
+             <string>开始分配</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="cancelPreferencesButton">
+            <property name="text">
+             <string>取消</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+
+      <!-- 宿舍管理页面 -->
+      <widget class="QWidget" name="dormitoryManagementPage">
+       <layout class="QVBoxLayout" name="verticalLayout_5">
+        <item>
+         <widget class="QPushButton" name="messageCenterButton">
+          <property name="text">
+           <string>消息中心</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="logoutButton">
+          <property name="text">
+           <string>退出登录</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="dormitoryManagementTitle"/>
+        </item>
+        <item>
+         <layout class="QGridLayout" name="gridLayout">
+          <item row="0" column="0">
+           <widget class="QLabel" name="dormitoryNameLabel">
+            <property name="text">
+             <string>宿舍名称：</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLineEdit" name="dormitoryNameInput">
+            <property name="placeholderText">
+             <string>请输入宿舍名称</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="buildingLabel">
+            <property name="text">
+             <string>楼栋：</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QLineEdit" name="buildingInput">
+            <property name="placeholderText">
+             <string>请输入楼栋号</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="roomNumberLabel">
+            <property name="text">
+             <string>房间号：</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QLineEdit" name="roomNumberInput">
+            <property name="placeholderText">
+             <string>请输入房间号</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QLabel" name="capacityLabel">
+            <property name="text">
+             <string>容量：</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1">
+           <widget class="QComboBox" name="capacityInput">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>40</height>
+             </size>
+            </property>
+            <item>
+             <property name="text">
+              <string>4人</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>6人</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>8人</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="4" column="0">
+           <widget class="QLabel" name="dormitoryGenderLabel">
+            <property name="text">
+             <string>性别：</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="1">
+           <widget class="QComboBox" name="dormitoryGenderInput">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>40</height>
+             </size>
+            </property>
+            <item>
+             <property name="text">
+              <string>男</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>女</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="5" column="0">
+           <widget class="QLabel" name="scheduleTypeLabel">
+            <property name="text">
+             <string>作息类型：</string>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="1">
+           <widget class="QComboBox" name="scheduleTypeInput">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>40</height>
+             </size>
+            </property>
+            <item>
+             <property name="text">
+              <string>早</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>晚</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="6" column="0" colspan="2">
+           <widget class="QCheckBox" name="acceptDifferentMajorCheckBox">
+            <property name="text">
+             <string>接受不同专业</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <item>
+           <widget class="QPushButton" name="addDormitoryButton">
+            <property name="text">
+             <string>添加宿舍</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="editDormitoryButton">
+            <property name="text">
+             <string>编辑宿舍</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="deleteDormitoryButton">
+            <property name="text">
+             <string>删除宿舍</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QTableWidget" name="dormitoryTable">
+          <column>
+           <property name="text">
+            <string>ID</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>宿舍名称</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>楼栋</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>房间号</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>容量</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>性别</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>当前人数</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>作息类型</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>接受不同专业</string>
+           </property>
+          </column>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="backToHomeButton">
+          <property name="text">
+           <string>返回主页</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+
+      <!-- 消息页面 -->
+      <widget class="QWidget" name="messagePage">
+       <layout class="QVBoxLayout" name="verticalLayout_message">
+        <item>
+         <widget class="QLabel" name="messagePageTitle">
+          <property name="text">
+           <string>消息中心</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="messageLayout">
+          <item>
+           <widget class="QTableWidget" name="userTable">
+            <property name="maximumWidth">
+             <number>200</number>
+            </property>
+            <property name="visible">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="messageContentLayout">
+            <item>
+             <widget class="QListWidget" name="messageList">
+              <property name="alternatingRowColors">
+               <bool>true</bool>
+              </property>
+              <property name="spacing">
+               <number>5</number>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="messageInputLayout">
+              <item>
+               <widget class="QLineEdit" name="messageInput">
+                <property name="placeholderText">
+                 <string>输入消息...</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="sendMessageButton">
+                <property name="text">
+                 <string>发送</string>
+                </property>
+                <property name="minimumWidth">
+                 <number>60</number>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="messageButtonLayout">
+          <item>
+           <widget class="QPushButton" name="backToHomeButton1">
+            <property name="text">
+             <string>返回</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuSystem">
+    <property name="title">
+     <string>系统</string>
+    </property>
+    <addaction name="actionLogin"/>
+    <addaction name="actionLogout"/>
+    <addaction name="separator"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <widget class="QMenu" name="menuDormitory">
+    <property name="title">
+     <string>宿舍管理</string>
+    </property>
+    <addaction name="actionAddDormitory"/>
+    <addaction name="actionEditDormitory"/>
+    <addaction name="actionDeleteDormitory"/>
+    <addaction name="separator"/>
+    <addaction name="actionViewDormitories"/>
+    <addaction name="actionSmartAssignment"/>
+   </widget>
+   <widget class="QMenu" name="menuUser">
+    <property name="title">
+     <string>用户管理</string>
+    </property>
+    <addaction name="actionRegister"/>
+    <addaction name="actionViewUsers"/>
+    <addaction name="actionUserPreferences"/>
+   </widget>
+   <widget class="QMenu" name="menuMessage">
+    <property name="title">
+     <string>消息中心</string>
+    </property>
+    <addaction name="actionSendMessage"/>
+    <addaction name="actionViewMessages"/>
+    <addaction name="actionMessageSettings"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>帮助</string>
+    </property>
+    <addaction name="actionAbout"/>
+    <addaction name="actionUserGuide"/>
+    <addaction name="actionSystemInfo"/>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <action name="actionLogin">
+  <property name="text">
+   <string>登录</string>
+  </property>
+  <property name="shortcut">
+   <string>Ctrl+L</string>
+  </property>
+ </action>
+ <action name="actionLogout">
+  <property name="text">
+   <string>登出</string>
+  </property>
+  <property name="shortcut">
+   <string>Ctrl+Shift+L</string>
+  </property>
+ </action>
+ <action name="actionExit">
+  <property name="text">
+   <string>退出</string>
+  </property>
+  <property name="shortcut">
+   <string>Ctrl+Q</string>
+  </property>
+ </action>
+ <action name="actionAddDormitory">
+  <property name="text">
+   <string>添加宿舍</string>
+  </property>
+  <property name="shortcut">
+   <string>Ctrl+N</string>
+  </property>
+ </action>
+ <action name="actionEditDormitory">
+  <property name="text">
+   <string>编辑宿舍</string>
+  </property>
+  <property name="shortcut">
+   <string>Ctrl+E</string>
+  </property>
+ </action>
+ <action name="actionDeleteDormitory">
+  <property name="text">
+   <string>删除宿舍</string>
+  </property>
+  <property name="shortcut">
+   <string>Delete</string>
+  </property>
+ </action>
+ <action name="actionViewDormitories">
+  <property name="text">
+   <string>查看宿舍列表</string>
+  </property>
+  <property name="shortcut">
+   <string>Ctrl+D</string>
+  </property>
+ </action>
+ <action name="actionSmartAssignment">
+  <property name="text">
+   <string>智能分配</string>
+  </property>
+  <property name="shortcut">
+   <string>Ctrl+A</string>
+  </property>
+ </action>
+ <action name="actionRegister">
+  <property name="text">
+   <string>用户注册</string>
+  </property>
+  <property name="shortcut">
+   <string>Ctrl+R</string>
+  </property>
+ </action>
+ <action name="actionViewUsers">
+  <property name="text">
+   <string>查看用户</string>
+  </property>
+  <property name="shortcut">
+   <string>Ctrl+U</string>
+  </property>
+ </action>
+ <action name="actionUserPreferences">
+  <property name="text">
+   <string>偏好设置</string>
+  </property>
+  <property name="shortcut">
+   <string>Ctrl+P</string>
+  </property>
+ </action>
+ <action name="actionSendMessage">
+  <property name="text">
+   <string>发送消息</string>
+  </property>
+  <property name="shortcut">
+   <string>Ctrl+M</string>
+  </property>
+ </action>
+ <action name="actionViewMessages">
+  <property name="text">
+   <string>查看消息</string>
+  </property>
+  <property name="shortcut">
+   <string>Ctrl+Shift+M</string>
+  </property>
+ </action>
+ <action name="actionMessageSettings">
+  <property name="text">
+   <string>消息设置</string>
+  </property>
+ </action>
+ <action name="actionAbout">
+  <property name="text">
+   <string>关于系统</string>
+  </property>
+  <property name="shortcut">
+   <string>F1</string>
+  </property>
+ </action>
+ <action name="actionUserGuide">
+  <property name="text">
+   <string>用户指南</string>
+  </property>
+  <property name="shortcut">
+   <string>F2</string>
+  </property>
+ </action>
+ <action name="actionSystemInfo">
+  <property name="text">
+   <string>系统信息</string>
+  </property>
+  <property name="shortcut">
+   <string>F3</string>
+  </property>
+ </action>
+ <resources/>
+ <connections/>
+</ui>

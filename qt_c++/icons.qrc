@@ -1,0 +1,20 @@
+<RCC>
+    <qresource prefix="/icons">
+        <file>login.png</file>
+        <file>logout.png</file>
+        <file>exit.png</file>
+        <file>add.png</file>
+        <file>edit.png</file>
+        <file>delete.png</file>
+        <file>list.png</file>
+        <file>assign.png</file>
+        <file>register.png</file>
+        <file>users.png</file>
+        <file>preferences.png</file>
+        <file>about.png</file>
+        <file>guide.png</file>
+        <file>info.png</file>
+        <file>image/chat.png</file>
+        <file>image/bunk-bed.png</file>
+    </qresource>
+</RCC> 
